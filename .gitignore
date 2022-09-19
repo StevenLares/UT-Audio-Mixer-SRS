@@ -1,0 +1,11 @@
+**log
+
+# These are LaTeX build and log files. 
+# They do not need to be tracked
+Design Documents/**/*fls
+Design Documents/**/*out
+Design Documents/**/*synctex.gz
+Design Documents/**/*fdb_latexmk
+Design Documents/**/*aux
+Design Documents/**/*toc
+Design Documents/**/*log

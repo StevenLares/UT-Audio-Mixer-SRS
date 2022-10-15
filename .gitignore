@@ -2,10 +2,10 @@
 
 # These are LaTeX build and log files. 
 # They do not need to be tracked
-Design Documents/**/*fls
-Design Documents/**/*out
-Design Documents/**/*synctex.gz
-Design Documents/**/*fdb_latexmk
-Design Documents/**/*aux
-Design Documents/**/*toc
-Design Documents/**/*log
+Software Requirement Specification/**/*fls
+Software Requirement Specification/**/*out
+Software Requirement Specification/**/*synctex.gz
+Software Requirement Specification/**/*fdb_latexmk
+Software Requirement Specification/**/*aux
+Software Requirement Specification/**/*toc
+Software Requirement Specification/**/*log

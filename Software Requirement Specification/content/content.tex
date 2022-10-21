@@ -1,15 +1,100 @@
 % Edit this file to update documentation. 
 % Adding a section or chapter automatically modifies the table of contents
 
+
+%TODO: Add version history to this document.
+%This could be a separate document that gets imported here.
+%That way, version history can be tracked in Git.
+
+
+%The introduction of the Software Requirements Specification (SRS) provides an overview of the entire SRS with purpose, scope, 
+%definitions, acronyms, abbreviations, references and overview of the SRS. 
 \chapter{Introduction}
 \label{ch:intro}
+The aim of this document is to provide in-depth insight of the Ubuntu Touch Audio Mixer software by defining the problem statement in detail. 
+
+It describes expected capabilities from end users while defining high-level product features.
+
+
+
+This document was built using references from
+
+
+\leavevmode
+\newline
+https://www.overleaf.com/latex/templates/cse355-software-requirements-specification-layout/pvjpzxthtngc
+
+\leavevmode
+\newline
+https://www.perforce.com/blog/alm/how-write-software-requirements-specification-srs-document
+
+\leavevmode
+\newline
+https://www.geeksforgeeks.org/software-engineering-quality-characteristics-of-a-good-srs/
+
+\leavevmode
+\newline
+https://www.geeksforgeeks.org/software-engineering-classification-of-software-requirements/?ref=lbp
+
+\leavevmode
+\newline
+utdallas.edu -SRS4.0 doc
+
 
 \section{Purpose }
+%TODO: Keep adjusting
+This document is used to "kick off" the project with a strong functional base. 
+I intend for this to be open source later on.
+
+
+
 \section{Intended Audience}
 \section{Intended Use}
+The app will be downloaded by the user through Ubuntu Touch's Open Store. 
+It will not be available elsewhere, other than the GitHub repo which hosts source code and possibly test builds of the app.
+
+It is intended to be used in two major ways:
+
+\begin{enumerate}
+	\item It can be used as a portable external audio mixer.
+	\begin{enumerate} 
+		\item This means that the app will act as a bridge between:
+			\begin{enumerate}
+				\item An external audio playback / microphone device feeding audio input into the phone running the app.
+				\item An external audio playback device receiving mixed audio output from the phone running the app.
+			\end{enumerate}
+		\item This is the main strength of this app for the following reasons: 
+		\begin{enumerate}
+				\item As of 10/21/2022, there are no Android or iOS alternatives that provide this functionality.
+				%TODO: Rewrite this limitation: \item PulseEffects does provide similar functionality, however there is a major limitation: You must run a server on an Linux machine, and have another Linux machine (with the same package installed) connect to this machine in order to receive the mixed audio output
+			\end{enumerate}
+	\end{enumerate}
+	\item It can also be used as an internal audio mixer. 
+	\begin{enumerate} 
+		\item This means that the app will be able to mix audio across the system.
+		\item This functionality is comparable to other apps on the Android and iOS stores, usually with the terms "equalizer", "EQ", "Mixer" in their name.
+		\item This functionality is also comparable to EQualizerAPO for Windows (https://sourceforge.net/projects/equalizerapo/), or PulseEffects for Linux (https://github.com/wwmm/easyeffects).
+
+		\item Why use this Ubuntu Touch implementation instead of Android or iOS? Well:
+		\begin{enumerate}
+			\item This app will behave closer to its desktop counterparts in that it will not contain ads, subscriptions, and other scummy money-grubbing schemes. If donations are added to support the app, they will stay on the official Open Store page and out of the user's way.
+			\item The app is open source, and is not a mysterious black box.
+			\item Will be implemented using as much native Ubuntu Touch and Linux functionality as possible.
+			\item It will also be written with a faster and more memory efficient programming language compared to Java (Android) or Swift (iOS). This is especially important as real time audio mixing can be a CPU and memory intensive process.
+		\end{enumerate}
+		
+		\item \textbf{NOTE: } This is also the "fall-back" in case functionality \#1 is not possible in the UT environment. However, it will still retain its strength over Android / iOS counterparts.
+	\end{enumerate}
+\end{enumerate}
+
+
+\textbf{NOTE:} The above list may be revised over time depending on how requirements can be fulfilled in the UT environment.
+
+
 \section{Product Scope}
 
-%Also known as Definitions and Acronyms
+
+
 \section{Risk Definition} 
 
 
@@ -64,6 +149,13 @@ By combining TDD with this SRS, I will be able to better test outline units of b
 
 \begin{appendices}
 \chapter{Glossary}
+
+\begin{itemize}
+	\item Audio Input:
+	\item Mixer:
+	\item Mixed:
+	\item Audio Output:
+\end{itemize}	
 
 
 \end{appendices}

@@ -1,0 +1,59 @@
+%Stuff that's specific to UT that can't be overlooked.
+%This is an ongoing document, won't reorganize into typical SRS since the SRS won't be maintained anyways
+
+https://docs.ubports.com/en/latest/
+\label{ch: considerations}
+
+
+
+
+
+%
+
+
+
+App suspension
+
+Apps are suspended whenever not in the foreground, or when the device is locked. When an app is suspended, it cannot receive location data. For this reason, apps will not be able to track your location whenever they are not in use or the device is locked.
+
+\begin{enumerate}
+	\item https://docs.ubports.com/en/latest/userguide/dailyuse/location.html
+	\item https://docs.ubports.com/\_/downloads/ro/latest/pdf/
+\end{enumerate}
+
+May need the user to use UT Tweak to remove app suspension for full usage.
+However, there may be a way around it.
+
+\vspace{10 pt}
+
+\begin{itemize}
+	\item Use QtCreator for IDE since it has debugging and testing:
+	\begin{itemize}
+		\item https://docs.ubports.com/en/latest/appdev/code-editor.html
+	Code Editor
+	\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+	\item Use C++... maybe use UT Specific libraries:
+	\begin{itemize}
+		\item https://docs.ubports.com/en/latest/appdev/nativeapp/index.html
+	\end{itemize}
+\end{itemize}
+
+
+
+
+
+\vspace{10 pt}
+
+
+Other guides that may be helpful in the future:
+\begin{enumerate}
+	\item https://docs.ubports.com/en/latest/appdev/guides/index.html
+	\item https://phone.docs.ubuntu.com/en/platform/
+	\item https://phone.docs.ubuntu.com/en/platform/guides/app-confinement
+	\item https://wiki.ubuntu.com/SecurityTeam/Specifications/ApplicationConfinement
+	\item https://phone.docs.ubuntu.com/en/platform/guides/lets-talk-about-performance
+\end{enumerate}

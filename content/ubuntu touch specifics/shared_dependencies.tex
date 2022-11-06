@@ -1,16 +1,44 @@
 \section{Shared Dependencies}
 
-This is the section that outlines external and out-of-memory dependencies that the project will have. Since I will follow the classical approach to TDD, I need to know these "shared" dependencies so that my unit tests can mock these out.
+This is the section that outlines external and out-of-memory dependencies that the project will have.
+
+ As it stands, this project is shared dependency heavy.
+
+ Since I will follow the classical approach to TDD, I need to know these "shared" dependencies so that my unit tests can mock these out.
 
 
-TODO: Learn how to import external libraries and linux packages into your project. Write down the result here, this will be the biggest priority for this section.
+Below are results of learning how to import external libraries and linux packages into the project. 
+
+
+\begin{itemize}
+	\item NOTES:
+	\begin{itemize}
+		\item You can include C++ dependencies (libraries) in your project through clickable.
+		\item From what I currently understand, Clickable can compile ARM software into desktop architecture as it uses a container. It may not be able to go the other way \(x86 / x86\_64 -> ARM\)
+		\item Interestingly, it can run the app in a continuous integration environment due to the use of the ARM -> Desktop container. There are guides on how to do CLCI
+		\item The consensus on Quora seems to be that the difficulty will range from: rebuilding with an ARM compiler to rewriting from scratch. It all depends on the type of software
+	\end{itemize}
+\end{itemize}
 
 
 
-TODO: Add specific audio plugin libraries, as well as any steps needed to import them into UT.
+\begin{itemize}
+	\item Links
+	\begin{itemize}
+		\item https://docs.ubports.com/en/latest/appdev/guides/dependencies.html
+		\item https://ubports.com/blog/ubports-news-1/post/introduction-to-clickable-147
+		\item https://clickable.bhdouglass.com/en/latest/
+		\item https://www.quora.com/How-hard-is-it-to-port-an-application-from-x86-to-ARM
+	\end{itemize}
+\end{itemize}
 
 
 
+TODO: Create a small list of external dependency candidates for each function in your proposed app. Favor dependencies that: already have an ARM build, that fit within your license model, is a C++ library, and requires the least amount of work to adapt.
 
-Resources:
+TODO: Once the candidate list has been created, create a prototype project in which you try to import each dependency and use them one by one. Write down results for the results of each.
+
+
+
+Contains the largest list of open source audio software that I could find:
 https://github.com/webprofusion/OpenAudio

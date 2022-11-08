@@ -51,19 +51,38 @@ https://github.com/webprofusion/OpenAudio
 \hline
 \thead{Name} & \thead{Brief Description} & \thead{License Type} & \thead{ARM Build} & \thead{C++ library} & \thead{Estimated work} & \thead{Link} \\ 
                     \hline
-Avendish & C++20 framework for any sort of audio \/ video \/ midi media objects & GPLv3 + commercial & Not sure & Y & Too much, it's too general & https://celtera.github.io/avendish/ \\    \hline
+Faust & 
+Functional programming language for real-time signal processing & 
+GNU General Public License v2.0 & 
+Y, doesn't depend on external libraries so compile the generated code into ARM & 
+Y, after generating the code & 
+May require knowing the full extent of code functionality. That may hamper scalability, and create software design compromises. However, there is a JIT compiler that may help with this. & 
+https://faust.grame.fr/ \\    \hline
 
-DISTRHO  & C++ framework for creating cross-platform audio plugins. DPF can build for LADSPA, DSSI, LV2, and VST formats. & ISC License & Most likely, seems to be mostly native code & Y & Might be a lot, doesn't hold your hand & https://github.com/DISTRHO/DPF \\    \hline
+RustAudio & 
+Collection of audio processing and plugin libraries for the Rust language & 
+MIT and Apache, to name a few & 
+Not sure, may depend on how much of the code is native Rust & 
+N, but it is written in Rust & 
+This is a collection of REPO's. I think cpal and dsp-chain will take care of most of the use-cases, without too much effort. Unless this can't compile for ARM \( or is too slow\), I might consider this a top pick, pretty straightforward. & 
+https://github.com/RustAudio \\    \hline
 
-Faust & Functional programming language for real-time signal processing & GNU General Public License v2.0 & Y, doesn't depend on external libraries so compile the generated code into ARM & Y, after generating the code & May require knowing the full extent of code functionality. That may hamper scalability, and create software design compromises. However, there is a JIT compiler that may help with this. & https://faust.grame.fr/ \\    \hline
+DISTRHO  & 
+C++ framework for creating cross-platform audio plugins. DPF can build for LADSPA, DSSI, LV2, and VST formats. & 
+ISC License & 
+Most likely, seems to be mostly native code & 
+Y & 
+Might be a lot, doesn't hold your hand & 
+https://github.com/DISTRHO/DPF \\    \hline
 
 
-JUCE & Cross-platform C++ framework for developing desktop and mobile apps and audio plugins & \small{https://juce.com/get-juce} & Not natively. There are threads for workarounds. Also, most users of this software are for Windows / Mac Desktop users. & Y & The library itself seems straightforward, but lack of Linux ARM compatibility might add extra work. & \small{https://juce.com/learn/tutorials}  \\    \hline
-
-
-RustAudio &  Collection of audio processing and plugin libraries for the Rust language & MIT and Apache, to name a few & Not sure, may depend on how much of the code is native Rust & N, but it is written in Rust & This is a collection of REPO's. I think cpal and dsp-chain will take care of most of the use-cases, without too much effort. Unless this can't compile for ARM \( or is too slow\), I might consider this a top pick, pretty straightforward. & https://github.com/RustAudio \\    \hline
-
-
+JUCE & 
+Cross-platform C++ framework for developing desktop and mobile apps and audio plugins & 
+\small{https://juce.com/get-juce} & 
+Not natively. There are threads for workarounds. Also, most users of this software are for Windows / Mac Desktop users. & 
+Y & 
+The library itself seems straightforward, but lack of Linux ARM compatibility might add extra work. & 
+\small{https://juce.com/learn/tutorials}  \\    \hline
 
 
 

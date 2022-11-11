@@ -1,8 +1,23 @@
 \section{Test Style}
 
-Will also implement a Test Driven development style, using Unit Testing Principles, Practices, and Patterns by Vladimir Khorikov
+Will implement a classical unit testing and test driven development style (TDD). I will use the book "Unit Testing Principles, Practices, and Patterns" by Vladimir Khorikov as a guide.
 
-TDD will likely be implemented using concepts from parts 1 and 2 of the book. Part 3 is on an as-needed basis.
+TDD will be implemented using concepts from parts 1 and 2 of the book for unit testing. Part 3 is for integration testing.
 
-By combining TDD with this SRS, I will be able to better test outline units of behavior and individual requirements (like Ubuntu dependencies separately)
+By combining TDD with this SRS, I will be able to better outline units of behavior and shared dependencies.
+
+Unfortunately, I think TDD (through unit testing) can only be implemented to a limited degree.
+
+This project is integration test heavy, not unit test heavy. This is because this project has many shared dependencies, and the domain model is fairly simple. Therefore, the TDD unit testing book might have limited applicability. 
+
+For code that can be unit tested, use the "Unit testing" book as a guide for good code design. These tests should actually be in the code, not the SRS. For that reason, I have revised the old functional requirements away from its original unit test design.
+
+
+\begin{itemize}
+\item Link on TDD through classical unit testing:
+	\begin{itemize}
+	\item https://khalilstemmler.com/articles/test-driven-development/introduction-to-tdd/\#Classic-Inside-OutChicago-and-Mockist-Outside-InLondon-TDD 
+	\item Note that this type of TDD (inside out, classical style) will entail applying it to functionality that is specific to the domain model and mocks shared dependencies. Refer to page 37 of unit testing book for details. 
+	\end{itemize}
+\end{itemize}
 

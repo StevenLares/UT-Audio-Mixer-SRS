@@ -1,13 +1,9 @@
 \label{ch:shared}
 
-This chapter contains additional notes on items specific to development in the UT environment. There is some decision making that is listed here.
+This is the chapter that focuses heavily on shared dependencies. 
 
+What are shared dependencies? To paraphrase the book "Unit Testing Principles, Practices, and Patterns" shared dependencies are both the external and out-of-memory dependencies that the project will have. This definition can also include internal dependencies, such as file I/O.
 
-General docs:
-https://docs.ubports.com/en/latest/
+As it stands, this project is heavy on shared dependencies.
 
-
-
-
-
-
+Since I will follow the classical approach to TDD, I need to know these shared dependencies so that my unit tests can mock these out.

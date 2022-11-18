@@ -1,0 +1,19 @@
+\section{User connects an effect module's output to a subsequent module's input}
+
+
+\begin{itemize}
+	\item An effect module can only feed output to
+	\begin{enumerate}
+		\item either one or two effect modules' inputs or
+		\item directly to the audio stream destination. This is the case where the module does not connect to any another module.
+	\end{enumerate}
+	
+	\item An effect module's input can only come from the audio stream source or from a previous effect module.
+
+	\item It is also possible for the audio stream source to be directly connected to the audio stream destination. This means that no audio effects are being applied to the stream whatsoever. 
+
+	\item TODO: Decide if the user can specify more than two modules to connect to, and should there be a hard limit?
+	
+
+
+\end{itemize}

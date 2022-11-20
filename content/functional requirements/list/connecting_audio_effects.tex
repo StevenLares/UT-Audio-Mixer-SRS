@@ -8,14 +8,19 @@
 		\item directly to the audio stream destination. This is the case where the module does not connect to any another module.
 	\end{enumerate}
 	
-	%TODO: I may need to adjust this so that the number of connecting states is limited. Basically, I don't want a loop in the connections. See FL Studio patcher image for details.
-	%TODO: Draw some scenarios on whiteboard
-	\item An effect module's input can only come from the audio stream source, from a previous effect module, or from a converger module.
+	
+	
+	\item An effect module's input can only come from the audio stream source, from a previous effect module, or from a converger module. An empty input is not possible.
 
 	\item It is also possible for the audio stream source to be directly connected to the audio stream destination. This means that no audio effects are being applied to the stream whatsoever. 
 
 	\item TODO: Decide if the user can specify more than two modules to connect to, and should there be a hard limit?
 	
+	\item TODO: Mention DAG and detection of cycles in real time.
+
+
+	\item TODO: Remove converging modules, effect plugins will be able to have multiple inputs.
+
 
 
 \end{itemize}

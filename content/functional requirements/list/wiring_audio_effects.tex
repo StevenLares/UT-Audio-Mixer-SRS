@@ -8,7 +8,11 @@
 		\item at least one effect module's input.
 	\end{enumerate}
 	
-	
+	\item It is not possible for an effect module to feed output to either:
+	\begin{enumerate}
+		\item itself
+		\item to a previous effect module if this results in a cycle in the audio chain. The system must prevent the user from creating these cycles in real time. See glossary for items with "(DAG)" for more details.
+	\end{enumerate}
 	
 	\item An effect module's input can be fed by any combination of:
 	\begin{enumerate}
@@ -27,11 +31,7 @@
 	\item It is also possible for the audio stream source to be directly connected to the audio stream destination, with no effect modules in the audio chain. This results in audio that is not actively mixed.
 
 	
-	\item TODO: Mention DAG and detection of cycles in real time. However, connecting to this module from the current one must not result in a cycle. See: [TODO: Add DAG cycle article]
-
-
-	\item TODO: Remove converging modules, effect plugins will be able to have multiple inputs.
-
+	
 
 
 \end{itemize}

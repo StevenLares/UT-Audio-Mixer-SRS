@@ -2,21 +2,32 @@
 
 
 \begin{itemize}
-	\item An effect module can only feed output to
+	\item An effect module can feed output to any combination of:
 	\begin{enumerate}
-		\item either one or two effect modules' inputs or
-		\item directly to the audio stream destination. This is the case where the module does not connect to any another module.
+		\item the audio stream destination. 
+		\item at least one effect module's input.
 	\end{enumerate}
 	
 	
 	
-	\item An effect module's input can only come from the audio stream source, from a previous effect module, or from a converger module. An empty input is not possible.
+	\item An effect module's input can be fed by any combination of:
+	\begin{enumerate}
+		\item the audio stream source.
+		\item at least one previous effect module.
+	\end{enumerate}
 
-	\item It is also possible for the audio stream source to be directly connected to the audio stream destination. This means that no audio effects are being applied to the stream whatsoever. 
 
-	\item TODO: Decide if the user can specify more than two modules to connect to, and should there be a hard limit?
+	\item Empty input(s) or output(s) handling:
+	\begin{enumerate}
+		\item The effect module has no input: In this case, the module should have a blue border.
+		\item The effect module has no output: In this case, the module should have a red border.
+		\item The effect module has neither an input nor an output: In this case, the module should have a purple border. Purple will be the sum of the blue and red colors from the above items.
+	\end{enumerate}
+
+	\item It is also possible for the audio stream source to be directly connected to the audio stream destination, with no effect modules in the audio chain. This results in audio that is not actively mixed.
+
 	
-	\item TODO: Mention DAG and detection of cycles in real time.
+	\item TODO: Mention DAG and detection of cycles in real time. However, connecting to this module from the current one must not result in a cycle. See: [TODO: Add DAG cycle article]
 
 
 	\item TODO: Remove converging modules, effect plugins will be able to have multiple inputs.

@@ -1,17 +1,29 @@
 \section{IDE, Debugger, and Framework Choice}
 
 
-\begin{itemize}
-	\item Use QtCreator for IDE since it has debugging and testing:
-	\begin{itemize}
-		\item https://docs.ubports.com/en/latest/appdev/code-editor.html
-	\end{itemize}
-\end{itemize}
-
 
 \begin{itemize}
-	\item Use either C++ or RUST. Use Qt 5.12.9 and the QML framework:
+	\item Packaging, deploying, publishing and tests.
 	\begin{itemize}
-		\item https://docs.ubports.com/en/latest/appdev/nativeapp/index.html
+		\item The Clickable program includes the following in Docker images:
+		\begin{itemize}
+			\item QtCreator IDE
+			\item GDB
+			\item Project templates for different languages
+			\item Qt 5.12.9
+			\item QML API
+			\item Suru Icons
+		\end{itemize}
+		\item Learn more about Clickable:
+		\begin{itemize}
+			\item https://docs.ubports.com/en/latest/appdev/code-editor.html
+			\item https://docs.ubports.com/en/latest/appdev/nativeapp/index.html
+			\item https://clickable.bhdouglass.com/en/latest/
+		\end{itemize} 
+	\end{itemize}	
+	\item Language and Frameworks:
+	\begin{itemize}
+		\item Use either C++ or RUST. This is crucial for low latency performance.
+		\item Qt frameworks already providded by the clickable Docker image. This ensures compatability with Ubuntu Touch devices
 	\end{itemize}
 \end{itemize}
